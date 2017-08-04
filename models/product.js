@@ -1,4 +1,4 @@
-var mongoose  = require('mongoose');
+var mongoose  = require('../lib/dbconnect');
 
 var schema = mongoose.Schema;
 
@@ -6,6 +6,7 @@ var productSchema = new Schema({
   name:  String,
   photo: String,
   locations: [String],
+  tags: [String],
   likes: Number,
   dislikes: Number,
   reviews: [{ name: String, body: String, date: Date }],
@@ -13,4 +14,6 @@ var productSchema = new Schema({
   sponsered: Boolean
 });
 
-var Product = mongoose.model('Product', productSchema);
+var product = mongoose.model('product', productSchema);
+
+module.exports = product;
