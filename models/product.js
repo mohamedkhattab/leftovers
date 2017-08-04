@@ -2,7 +2,7 @@ var mongoose  = require('../lib/dbconnect');
 
 var schema = mongoose.Schema;
 
-var productSchema = new Schema({
+var productSchema = new schema({
   name:  String,
   photo: String,
   locations: [String],
