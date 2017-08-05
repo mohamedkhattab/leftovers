@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 var product = require('../models/product');
 
+router.get('/', function(req, res, next) {
+  res.render('index', {});
+});
+
 /* GET home page. */
 router.get('/product', function(req, res, next) {
   res.json({
