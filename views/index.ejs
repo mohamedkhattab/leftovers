@@ -1,1 +1,96 @@
-<p>Server Running.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leftovers</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="chosen/chosen.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav>
+    <ul class="nav">
+      <li>
+        <a href="#new-item" class='btn new-item-btn' data-target='about'>Submit an item</a>
+      </li>
+    </ul>
+    <ul class="nav right">
+      <li>Mostafa M. | <a href="#">Logout</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <header>
+    <img src="img/logo.png" alt="Leftovers Logo" id="logo">
+    <h2>Leftovers</h2>
+    <h3><small>Find meals suiting your diet</small></h3>
+    
+    <form id="search" action="">
+      
+      <select class="chosen-select" multiple name="query" id="searchBox">
+        <option value="Healthy food">Healthy food</option>
+        <option value="Lactose free">Lactose free</option>
+        <option value="Gluten free">Gluten free</option>
+        <option value="Sugar free">Sugar free</option>
+        <option value="Halal">Halal</option>
+        <option value="Vegan">Vegan</option>
+      </select>
+      <button class="btn search-btn"><i class="fa fa-search"></i></button>
+
+      <br><br>
+
+      <select name="country" class="chosen-select">
+        <option value="Egypt">Egypt</option>
+        <option value="United States">United States</option>
+        <option value="United Arab Emirates">United Arab Emirates</option>
+      </select>
+
+      <select name="city" class="chosen-select">
+        <option value="Cairo">Cairo</option>
+        <option value="Alexandria">Alexandria</option>
+        <option value="Giza">Giza</option>
+      </select>
+    </form>
+  </header>
+  
+  <div id="results">
+<!--
+    <section class="result">
+      <img src="img/img.jpg" alt="">
+      <div class='footer'>
+        <h3>Product Name</h3>
+        <span>
+          <i class="fa fa-thumbs-up"> 63</i>
+          <i class="fa fa-thumbs-down"> 2</i>
+        </span>
+      </div>
+    </section>
+-->
+    
+  </div>
+  
+  <div id="new-item" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fa fa-plus"></i> Submit new product/resturant</h3>
+        <button class="btn close"><span class="fa fa-times"></span></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <br>
+          <label for="">Name: <input type="text"></label>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="chosen/chosen.jquery.min.js"></script>
+  <script src="chosen/docsupport/init.js"></script>
+  <script src="chosen/docsupport/prism.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
